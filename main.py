@@ -1,12 +1,5 @@
-print("=== Program Biodata Mahasiswa ===")
+from controllers.auth_controller import AuthController
 
-# Mengambil input dari pengguna
-nama = input("Masukkan Nama           : ")
-nim = input("Masukkan NIM            : ")
-program_studi = input("Masukkan Program Studi  : ")
-
-print("\n--- Data Mahasiswa Berhasil Disimpan ---")
-print(f"Nama           : {nama}")
-print(f"NIM            : {nim}")
-print(f"Program Studi  : {program_studi}")
-print("Status         : Setup Berhasil!")
+if __name__ == "__main__":
+    app = AuthController()
+    app.show_login()  # Diubah dari app.run() menjadi app.show_login()
