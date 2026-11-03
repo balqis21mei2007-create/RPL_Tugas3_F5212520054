@@ -1,3 +1,12 @@
+# Sistem Informasi Management Perpustakaan Desktop (MVC)
+
+Aplikasi desktop manajemen data perpustakaan berbasis Python yang dibangun menggunakan **CustomTkinter** untuk antarmuka pengguna (GUI), arsitektur **Model-View-Controller (MVC)**, dan basis data **MySQL (Laragon)**. Aplikasi ini dilengkapi dengan pengamanan kata sandi menggunakan algoritma **SHA-256**, otorisasi berbasis peran (**Role-Based Access Control / RBAC**), serta pengujian otomatis melalui **CI/CD Pipeline (GitHub Actions)**.
+
+---
+
+## 📁 Struktur Direktori Proyek (MVC)
+
+```text
 Tugas_Modul3_F5212520057/
 ├── .github/
 │   └── workflows/
