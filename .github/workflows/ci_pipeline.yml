@@ -29,4 +29,6 @@ jobs:
       run: |
         python -m pytest -v
 
-        
+    - name: Run Flake8 Linter
+      run: |
+            flake8 models/ controllers/ --count --select=E9,F63,F7,F82 --show-source --statistics
