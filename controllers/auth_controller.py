@@ -23,16 +23,14 @@ class AuthController:
             if self.login_view:
                 self.login_view.destroy()
 
-            # 1. Inisialisasi BukuView dengan menambahkan parameter root/controller yang sesuai
-            # Pastikan BukuView menerima argumen controller dan current_user
-            import customtkinter as ctk # Sesuaikan jika menggunakan tk.Tk() atau Toplevel()
-            self.buku_root = ctk.CTk() # Atau Toplevel tergantung arsitektur root utama Anda
-            self.buku_view = BukuView(root=self.buku_root, controller=self, current_user=user, login_view=None)
+            # 1. Inisialisasi BukuView dengan data pengguna yang login
+            self.buku_view = BukuView(controller=self, current_user=user)
             
             # 2. Inisialisasi BukuModel
             buku_model = BukuModel()
 
             # 3. Hubungkan BukuController dengan BukuView dan BukuModel
+            # Ini akan otomatis menjalankan self.tampilkan_semua_buku() & binding tombol dari BukuController
             self.buku_controller = BukuController(view=self.buku_view, model=buku_model)
 
             self.buku_view.mainloop()
